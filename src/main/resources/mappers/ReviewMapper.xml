@@ -19,5 +19,5 @@
 		WHERE
 			`id` = #{id} <!-- 변수 명과 일치시킨다. --> 	
 	</select>
-
+	
 </mapper>

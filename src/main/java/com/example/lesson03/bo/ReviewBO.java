@@ -15,7 +15,7 @@ public class ReviewBO {
 	// input : id
 	// output: Review // where --> by 로 써주기 column명 적어주기
 	// Integer 안올수도 있다. int는 반드시 온다.
-	public Review getReviewById(int id) {
+	public Review getReviewById(Integer id) {
 		return reviewDAO.selectReviewById(id);
 	}
 }
