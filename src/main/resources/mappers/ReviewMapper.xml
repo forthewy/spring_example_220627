@@ -20,4 +20,59 @@
 			`id` = #{id} <!-- 변수 명과 일치시킨다. --> 	
 	</select>
 	
+	<!-- insert 타입은 resultType이 없다. -->
+	<insert id="insertReview" parameterType="com.example.lesson03.model.Review">
+		INSERT INTO `new_review`
+		(
+			`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
+		)
+		VALUES
+		(
+			#{storeId}
+			, #{menu}
+			, #{userName}
+			, #{point}
+			, #{review}
+			, NOW()
+			, NOW()
+		)
+	</insert>
+	<insert id="insertReviewAsField" parameterType="map">
+		INSERT INTO `new_review`
+		(
+			`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
+		)
+		VALUES
+		(
+			#{storeId}
+			, #{menu}
+			, #{userName}
+			, #{point}
+			, #{review}
+			, NOW()
+			, NOW()
+		)
+	</insert>
+	
+	<update id="updateReviewById" parameterType="map">
+		UPDATE
+			`new_review`
+		SET
+			`review` = #{review} <!-- @Param 명-->
+			, `updatedAt` = NOW()
+		WHERE
+			`id` = #{id}
+	</update>
 </mapper>
