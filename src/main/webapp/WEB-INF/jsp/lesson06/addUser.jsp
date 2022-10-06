@@ -58,7 +58,7 @@
 	</div>
 	<script>
 		$(document).ready(function() {
-			/* // (1) jquery의 submit 기능 이용하기
+			 // (1) jquery의 submit 기능 이용하기
 			$('form').on('submit', function(e) {
 				//e.preventDefault(); // submit 되는 것을 막는다
 				//alert("추가 버튼 클릭");
@@ -86,7 +86,7 @@
 				}
 				
 				// 여기까지 도달하면 submit이 진행된다.
-			}); */
+			}); 
 			
 			// (2) jquery에 Ajax 통신을 이용하기 - ***button type을 button 으로 변경!!***
 			$('#addBtn').on('click', function(e) {
