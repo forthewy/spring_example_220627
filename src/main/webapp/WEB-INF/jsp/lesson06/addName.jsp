@@ -61,7 +61,7 @@
 					, data:{"name":name}
 					
 					// response
-					, success:function(data) {
+					, success: function(data) {
 						//alert(data.is_duplication); // ajax 가 json임을 확인해서 parsing 해서 객체화해서 처리함...?
 						if (data.is_duplication) {
 							$('#nameStatusArea').append('<span class="text-danger">중복된 이름입니다</span>');
@@ -73,12 +73,12 @@
 				});
 			});
 			
-			$('#joinBtn').on('click', function() {
+			$('#joinBtn').on('click', function(e) {
 				//alert("aaaa");
 				
 				
 				//만약에 nameStatusArea에 자식 노트(태그)가 없으면 서브밋을 한다.
-				console.log($('nameStatusArea').children());
+				console.log($('#nameStatusArea').children().length);
 				
 				if ($('#nameStatusArea').children().length == 0) {
 					alert("서브밋 가능");

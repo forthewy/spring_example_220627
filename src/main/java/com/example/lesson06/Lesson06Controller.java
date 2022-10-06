@@ -55,15 +55,15 @@ public class Lesson06Controller {
 	
 	// JSON String [{"키":value}]
 	// AJAX 요청 -> @ResponseBody
-	@ResponseBody
 	@GetMapping("/ex02/is_duplication")
+	@ResponseBody
 	public Map<String, Boolean> isDuplication(
 			@RequestParam("name") String name) {
 		
 		// {"is_duplication":true} => 중복일때
 		Map<String, Boolean> result = new HashMap<>();
-		boolean isDuplication = userBO.existUserByName(name);
-		result.put("is_duplication", isDuplication);
+		boolean isD = userBO.existUserByName(name);
+		result.put("is_duplication", isD);
 		return result;
 	}
 }
